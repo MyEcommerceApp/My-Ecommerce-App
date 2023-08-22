@@ -4,7 +4,6 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.ToString;
 
 import java.util.List;
 
@@ -38,7 +37,7 @@ public class User {
 //  private Role role;
 
     @OneToMany(mappedBy = "address")
-    private Address address;
+    private List<Address> address;
 
     @OneToMany(mappedBy = "user")
     private List<Order> orders;
