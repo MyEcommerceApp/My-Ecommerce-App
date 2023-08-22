@@ -1,7 +1,6 @@
 package com.oil.ecommerceoilapp.entity;
 
 
-import org.hibernate.annotations.GenericGenerator;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
@@ -25,9 +24,9 @@ public class Product {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
+	private Integer id;
     
-	@Column(name="product_name")
+	@Column(name="name")
 	private String productName;
 
 	@Column(name="description")

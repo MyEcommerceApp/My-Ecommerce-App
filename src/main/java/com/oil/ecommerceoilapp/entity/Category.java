@@ -1,15 +1,13 @@
 package com.oil.ecommerceoilapp.entity;
 
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import java.util.List;
 
 @NoArgsConstructor
-@Getter
-@Setter
+@AllArgsConstructor
+@Data
 @Entity
 @Table(name = "category")
 public class Category {
@@ -18,8 +16,8 @@ public class Category {
     @Column(name = "id", nullable = false)
     private Integer id;
 
-    @Column(name = "title", nullable = false, length = 155)
-    private String title;
+    @Column(name = "name", nullable = false, length = 155)
+    private String categoryName;
 
     @Column(name = "image")
     private String imageURL;
