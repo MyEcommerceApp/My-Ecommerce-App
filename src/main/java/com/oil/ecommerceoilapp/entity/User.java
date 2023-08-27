@@ -36,9 +36,11 @@ public class User {
 //  @Column(name = "role")
 //  private Role role;
 
-    @OneToMany(mappedBy = "address")
+    @OneToMany (cascade=CascadeType.ALL)
+    @JoinColumn(name = "address_id")
     private List<Address> address;
 
-    @OneToMany(mappedBy = "user")
+    @OneToMany (cascade=CascadeType.ALL)
+    @JoinColumn(name = "order_id")
     private List<Order> orders;
 }
