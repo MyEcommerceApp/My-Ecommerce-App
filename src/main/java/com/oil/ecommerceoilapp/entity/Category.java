@@ -22,9 +22,6 @@ public class Category {
     @Column(name = "image")
     private String imageURL;
 
-    @OneToMany(mappedBy = "category", cascade = {CascadeType.ALL, CascadeType.PERSIST})
-    private List<Product> products;
-
     @Column(name = "enabled", nullable = false)
     private Boolean enabled;
 }
