@@ -17,17 +17,17 @@ public class CategoryController {
     @Autowired
     private CategoryService categoryService;
 
-    @PostMapping(value = "/save")
+    @PostMapping("/save")
     public void saveCategory(@RequestBody CategoryDTO categoryDTO) {
         categoryService.saveCategory(categoryDTO);
     }
 
-    @GetMapping(value = "/findById/{id}")
+    @GetMapping("/findById/{id}")
     public Category findByCategoryId(@PathVariable Integer id) {
         return categoryService.findByCategoryId(id);
     }
 
-    @DeleteMapping(value = "/deleteById/{id}")
+    @DeleteMapping("/deleteById/{id}")
     public void deleteByCategoryId(@PathVariable Integer id) {
         categoryService.deleteByCategoryId(id);
     }
