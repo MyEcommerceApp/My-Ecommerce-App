@@ -18,24 +18,27 @@ public class CategoryController {
     private CategoryService categoryService;
 
     @PostMapping(value = "/save")
-    public void savecategory(CategoryDTO categoryDTO){
+    public void saveCategory(@RequestBody CategoryDTO categoryDTO) {
         categoryService.saveCategory(categoryDTO);
     }
+
     @GetMapping(value = "/findById/{id}")
-    public  Category findByCategoryId(@PathVariable Integer id){
+    public Category findByCategoryId(@PathVariable Integer id) {
         return categoryService.findByCategoryId(id);
     }
+
     @DeleteMapping(value = "/deleteById/{id}")
-    public void deleteByCategoryId(@PathVariable Integer id){
+    public void deleteByCategoryId(@PathVariable Integer id) {
         categoryService.deleteByCategoryId(id);
     }
 
     @PutMapping("updateCategoryById/{id}")
-    public Category updateCategory(@PathVariable Integer id, @RequestBody CategoryDTO categoryDTO ){
+    public Category updateCategory(@PathVariable Integer id, @RequestBody CategoryDTO categoryDTO) {
         return categoryService.updateCategory(id, categoryDTO);
     }
 
-    public List<Category> findAllCategory(){
+    @GetMapping("/findAll")
+    public List<Category> findAllCategory() {
         return categoryService.findAllCategory();
     }
 }
