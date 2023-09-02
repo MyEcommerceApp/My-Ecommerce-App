@@ -3,5 +3,5 @@ package com.oil.ecommerceoilapp.repository;
 import com.oil.ecommerceoilapp.entity.Product;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface ProductRepository extends JpaRepository<Integer, Product> {
+public interface ProductRepository extends JpaRepository<Product, Integer> {
 }

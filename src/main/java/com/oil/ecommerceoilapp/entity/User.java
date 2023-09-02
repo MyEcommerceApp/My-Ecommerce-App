@@ -36,9 +36,9 @@ public class User {
 //  @Column(name = "role")
 //  private Role role;
 
-    @OneToMany(mappedBy = "address")
-    private List<Address> address;
+//    @OneToMany(mappedBy = "address")
+//    private List<Address> address;
 
-    @OneToMany(mappedBy = "user")
-    private List<Order> orders;
+//    @OneToMany(mappedBy = "user")
+//    private List<Order> orders;
 }
